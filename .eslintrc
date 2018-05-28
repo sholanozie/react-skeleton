@@ -1,11 +1,12 @@
 {
+  "parser": "babel-eslint",
   "plugins": [
     "react"
   ],
   "rules": {
     "indent": [
-      2,
-      "tab"
+      "error",
+      2
     ],
     "quotes": [
       2,
@@ -31,5 +32,16 @@
       "jsx": true
     }
   },
-  "extends": ["eslint:recommended", "plugin:react/recommended"]
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "globals": {
+    "document": false,
+    "window": false,
+    "localStorage": false,
+    "btoa": false,
+    "Audio": false,
+    "Notification": false
+  }
 }
